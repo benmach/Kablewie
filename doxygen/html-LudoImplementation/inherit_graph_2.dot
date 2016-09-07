@@ -1,0 +1,28 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ActionListener",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Ludo.LudoDisplayHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_ludo_1_1_ludo_display_header.html",tooltip="Shows information to user about Kablewie board. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Ludo.LudoMainForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_ludo_1_1_ludo_main_form.html",tooltip="Displays the main form of the game. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Ludo.MenuLudo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_ludo_1_1_menu_ludo.html",tooltip="Shows a dialogue where we set the players for the ludo game. "];
+  Node5 [label="ChangeListener",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="JPanel",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Ludo.LudoDisplayBoard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_ludo_1_1_ludo_display_board.html",tooltip="Displays tiles in a grid and handles user interaction. "];
+  Node6 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Ludo.LudoRunner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_ludo_1_1_ludo_runner.html",tooltip="Class implementing the runners which will play on the board for the players. "];
+  Node6 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Ludo.LudoTile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_ludo_1_1_ludo_tile.html",tooltip="Is an abstract implementation of the tile classes. "];
+  Node10 [label="MouseListener",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="JFrame",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

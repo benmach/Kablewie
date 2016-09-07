@@ -1,0 +1,23 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ActionListener",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Principal.DisplayHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_principal_1_1_display_header.html",tooltip="Shows information to user about Kablewie board. "];
+  Node3 [label="ChangeListener",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MouseListener",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Principal.Tile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_principal_1_1_tile.html",tooltip="Is an abstract implementation of the tile classes. "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Principal.BombTile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_principal_1_1_bomb_tile.html",tooltip="Stores the location of the bomb tiles and how to animate them. "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Principal.EmptyTile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_principal_1_1_empty_tile.html",tooltip="Handles the logic for when empty tiles are clicked along with animation. "];
+  Node8 [label="JPanel",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Principal.DisplayBoard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_principal_1_1_display_board.html",tooltip="Displays tiles in a grid and handles user interaction. "];
+  Node8 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
