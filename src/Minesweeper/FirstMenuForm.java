@@ -8,6 +8,7 @@ package Minesweeper;
 
 import javax.swing.*;
 
+import ConnectFour.P4;
 import Ludo.LudoMenu;
 
 /**
@@ -17,7 +18,7 @@ import Ludo.LudoMenu;
 public class FirstMenuForm extends JFrame{
 
 	// MenuForm dimensions
-    private static final int FORM_WIDTH = 400;
+    private static final int FORM_WIDTH = 600;
     private static final int FORM_HEIGHT = 200;
 
 	private static final int PADDING = 60;
@@ -44,13 +45,13 @@ public class FirstMenuForm extends JFrame{
         // Setup labels
         JLabel welcomeLabel = new JLabel("Welcome to Kablewie!",
                                          SwingConstants.CENTER);
-	    welcomeLabel.setLocation((FORM_WIDTH - LABEL_WIDTH) / 2, PADDING/2);
+	    welcomeLabel.setLocation(FORM_WIDTH / 2-LABEL_WIDTH/2, PADDING/2);
 	    welcomeLabel.setSize(LABEL_WIDTH, LABEL_HEIGHT);
         form.add(welcomeLabel);
         
         // Setup start button
         JButton startMinesweeperButton = new JButton("Start Minesweeper");
-	    startMinesweeperButton.setLocation((FORM_WIDTH - BUTTON_WIDTH) / 2 + BUTTON_WIDTH/2 +PADDING/3,
+	    startMinesweeperButton.setLocation(FORM_WIDTH / 2 - BUTTON_WIDTH/2 - BUTTON_WIDTH - PADDING/3 ,
 			    (PADDING + LABEL_HEIGHT));
 	    startMinesweeperButton.setSize(BUTTON_WIDTH, BUTTON_HEIGHT);
         form.add(startMinesweeperButton);
@@ -65,7 +66,7 @@ public class FirstMenuForm extends JFrame{
         
         // Setup start button
         JButton startLudoButton = new JButton("Start Ludo");
-	    startLudoButton.setLocation((FORM_WIDTH - BUTTON_WIDTH) / 2 - BUTTON_WIDTH/2- PADDING/3,
+	    startLudoButton.setLocation(FORM_WIDTH/2 -BUTTON_WIDTH/2,
 			    (PADDING + LABEL_HEIGHT) );
 	    startLudoButton.setSize(BUTTON_WIDTH, BUTTON_HEIGHT);
         form.add(startLudoButton);
@@ -77,7 +78,21 @@ public class FirstMenuForm extends JFrame{
             menu.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             menu.setVisible(true);
         });
-        
+     
+        // Setup start button
+        JButton startConnectFourButton = new JButton("Start connect four");
+        startConnectFourButton.setLocation(FORM_WIDTH/2 - BUTTON_WIDTH/2 + BUTTON_WIDTH + PADDING/3, (PADDING + LABEL_HEIGHT));
+	    startConnectFourButton.setSize(BUTTON_WIDTH, BUTTON_HEIGHT);
+        form.add(startConnectFourButton);
+
+        startConnectFourButton.addActionListener(e -> {
+        	this.setVisible(false);
+        	//Create and display menu form
+        	P4 jeu=new P4();
+    		jeu.setSize(310,340);
+    		jeu.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    		jeu.setVisible(true);
+        });
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     
